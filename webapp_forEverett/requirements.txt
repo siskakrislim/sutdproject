@@ -1,0 +1,13 @@
+flask
+flask_cors
+pandas
+gunicorn
+numpy
+nltk
+gensim
+string
+requests
+io
+csv
+scikit-learn
+json

@@ -1,0 +1,32 @@
+<div class="container">
+    <div style="margin-top: 10%;">
+        <div style="text-align: end;">
+            <button style="margin-bottom: 30px;" type="button" class="btn btn-danger" routerLink="/login">Student
+                Login</button>
+        </div>
+        <div style="margin-bottom: 30px; text-align: center;">
+            <img src="assets/simon-lee-N4RYO1198KM-unsplash.jpg" alt="image" width="200" height="200"
+                style="border-radius: 50%;">
+        </div>
+        <div>
+            <form [formGroup]="loginForm">
+                <div class="form-group">
+                    <label for="exampleInputEmail1" class="input_text">Instructor ID</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Enter id" formControlName="id">
+                </div>
+            </form>
+            <div class="login_btn_container">
+                <button type="button" class="btn login_btn" (click)="onLogin()">
+                    Login
+                </button>
+            </div>
+        </div>
+        <div *ngIf="error" class="alert alert-danger" style="margin-top: 30px;" role="alert">
+            Please complete all required fields.
+        </div>
+        <div *ngIf="invalidUser" class="alert alert-danger" style="margin-top: 30px;" role="alert">
+            Invalid User.
+        </div>
+    </div>
+</div>

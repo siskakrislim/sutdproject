@@ -1,0 +1,28 @@
+.login_btn {
+    background-color: #3E4B5E;
+    color: white;
+    width: 100%;
+}
+
+.login_btn_container {
+    width: 100%;
+    text-align: end;
+}
+
+.tab:hover {
+    background-color: var(--grey-7);
+    color: var(--grey-85);
+}
+
+.tab-active {
+    border-bottom: 2px solid var(--action-pri-active);
+    color: var(--action-pri-active) !important;
+}
+
+.sub_container {
+    background-color: rgb(189, 193, 199);
+    margin-top: 50px;
+    border-radius: 25px;
+    align-content: center;
+    padding: 20px;
+}

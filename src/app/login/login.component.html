@@ -1,0 +1,62 @@
+<div class="main_container">
+    <div class="container">
+        <div class="sub_container">
+            <div style="text-align: end;">
+                <button style="margin-bottom: 30px;" type="button" class="btn btn-danger" routerLink="/admin">
+                    Admin Login
+                </button>
+            </div>
+            <div style="margin-bottom: 30px; text-align: center;">
+                <img src="assets/simon-lee-N4RYO1198KM-unsplash.jpg" alt="image" width="200" height="200"
+                    style="border-radius: 50%;">
+            </div>
+            <div *ngIf="!userExist">
+                <form [formGroup]="loginForm">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="input_text">Class</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter class" formControlName="class">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="input_text">Student ID</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter student id" formControlName="id">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1" class="input_text">Group Number</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter group" formControlName="group">
+                    </div>
+                </form>
+                <div class="login_btn_container">
+                    <button type="button" class="btn login_btn" (click)="onLogin()">
+                        Login
+                    </button>
+                </div>
+            </div>
+            <div *ngIf="userExist">
+                <div>
+                    <h2 style="text-align:center">Hello, {{currentUser['name']}}</h2>
+                </div>
+                <form [formGroup]="weekForm">
+                    <div class="form-group" style="margin-top: 30px;">
+                        <label for="exampleInputEmail1" class="input_text">Week Number</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter week" formControlName="week">
+                    </div>
+                </form>
+                <div class="login_btn_container">
+                    <button type="button" class="btn login_btn" (click)="onNext()">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+            <div *ngIf="error" class="alert alert-danger" style="margin-top: 30px;" role="alert">
+                Please complete all required fields.
+            </div>
+            <div *ngIf="invalidUser" class="alert alert-danger" style="margin-top: 30px;" role="alert">
+                Invalid User.
+            </div>
+        </div>
+    </div>
+</div>

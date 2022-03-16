@@ -1,0 +1,47 @@
+<div class="container">
+    <p class="header">
+        Key In Your Design Statement Below:
+    </p>
+    <form [formGroup]="qnsForm">
+        <div class="mb-3">
+            <p class="title">
+                Q1. In your own understanding, what product/ service are you designing ?
+            </p>
+            <p style="color: lightgray;">
+                E.g Design a/an "Smart Wallet".
+            </p>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+                formControlName="q1">
+        </div>
+        <div class="mb-3">
+            <p class="title">
+                Q2. In your own understanding, who are you designing this product/ service for ?
+            </p>
+            <p style="color: lightgray;">
+                E.g Designing for "Young Mothers".
+            </p>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+                formControlName="q2">
+        </div>
+        <div class="mb-3">
+            <p class="title">
+                Q3. In your own understanding, what is the rationale of such design? You are designing the product/
+                service such that ________ .
+            </p>
+            <p style="color: lightgray;">
+                E.g Such that "User is able to access their house key while carrying the baby easily."
+            </p>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default"
+                formControlName="q3">
+        </div>
+    </form>
+    <div class="login_btn_container">
+        <button type="button" class="btn login_btn" (click)="onSubmit()">
+            Submit
+        </button>
+    </div>
+    <div *ngIf="error" class="alert alert-danger" style="margin-top: 30px;" role="alert">
+        Please complete all required fields.
+    </div>
+    <div style="margin-bottom: 100px;"></div>
+</div>
